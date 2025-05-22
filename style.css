@@ -48,6 +48,11 @@ nav {
     /* Yellow on hover */
 }
 
+nav.scrolled {
+    background-color: #265c4e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Hamburger menu (hidden by default) */
 .hamburger {
     display: none;
@@ -699,7 +704,7 @@ select {
     gap: 5px;
 }
 
-.checkbox-item input[type="checkbox"] {
+.checkbox-item input[type="radio"] {
     width: 16px;
     height: 16px;
     cursor: pointer;
