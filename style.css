@@ -711,6 +711,13 @@ select {
     background-color: blue;
 }
 
+.checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-color: blue;
+}
+
 .checkbox-item label {
     margin-bottom: 0;
     cursor: pointer;
