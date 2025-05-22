@@ -37,8 +37,8 @@
             <p>This is where the biodynamic community plays a vital role: to come together, reflect, review, and plan a
                 way forward.</p>
             <div class="buttons">
-                <button class="btn btn-primary">Register Now</button>
-                <button class="btn btn-secondary">View Program</button>
+                <a href="#register"><button class="btn btn-primary">Register Now</button></a>
+                <a href="#program"><button class="btn btn-secondary">View Program</button></a>
             </div>
             <div class="participants">
                 <div class="dots">
@@ -274,6 +274,19 @@
                     </div>
                 </div>
 
+                <div class="form-group full-width">
+                <label>Pricing<span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Regular-Price" name="Pricing" value="regularprice">
+                        <label for="Regular-Price">Regular Price: $250</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Early-Bird" name="Pricing" value="earlybird">
+                        <label for="Early-Bird">Early Bird: $180</label>
+                    </div>
+                </div>
+            </div>
 
                 <div class="form-group full-width">
                     <label for="dietary">Dietary Requirements</label>
@@ -517,13 +530,7 @@
         });
 
         // Add button click functionality (for demonstration)
-        document.querySelector('.btn-primary').addEventListener('click', () => {
-            alert('Redirecting to registration page...');
-        });
-
-        document.querySelector('.btn-secondary').addEventListener('click', () => {
-            alert('Redirecting to program page...');
-        });
+        
 
 
 
