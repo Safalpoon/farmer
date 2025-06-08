@@ -23,36 +23,57 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#program">Program</a>
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform">Register</a>
+            <a href="#pricing">Pricing</a>
             <a href="#faqs">FAQs</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class=""></div>
+        <div class="hero-background">
+            <img src="background.jpg" alt="Himalayan landscape with terraced fields" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+
         <div class="hero-content">
-            <span class="date">November 6–9, 2025</span>
-            <h1>Asian Biodynamic Conference 2025: Healing Himalayas</h1>
-            <p>This is where the biodynamic community plays a vital role: to come together, reflect, review, and plan a
-                way forward.</p>
-            <div class="buttons">
+            <div class="content-card">
+                <!-- Date Badge -->
+                <div class="date-badge">November 6–9, 2025</div>
+
+                <!-- Main Heading -->
+                <h2 class="main-heading">
+                    Asian Biodynamic Conference 2025: Healing Himalayas
+                </h2>
+
+                <!-- Description -->
+                <p class="description">
+                    This is where the biodynamic community plays a vital role: to come together, reflect, review, and
+                    plan a way forward.
+                </p>
+
+                <!-- Register Button -->
                 <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform"><button
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">Register Now</button></a>
-                <a href="#program"><button class="btn btn-secondary">View Program</button></a>
-            </div>
-            <div class="participants">
-                <div class="dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                        class="register-btn" onclick="handleRegistration()">
+                        Register Now
+                    </button></a>
+                <a href="#program"><button class="register-btn btn-secondary" onclick="handleRegistration()">
+                        View Program
+                    </button></a>
+
+                <!-- Pagination Dots -->
+                <div class="pagination-dots">
+                    <div class="dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <p>Join 200+ farmers from 30+ countries</p>
                 </div>
-                Join 200+ farmers from 30+ countries
             </div>
         </div>
     </section>
+
 
     <!-- Event Section -->
     <section class="event-section" id="about">
@@ -134,21 +155,21 @@
         </div>
     </section>
 
-    <section class="event-section" id="about">
+    <section class="event-section" id="pricing">
         <p class="subheading">ABOUT THE PRICE</p>
         <h2>Pricing</h2>
         <hr class="underline" />
         <section class="pricing-section">
-            <div class="pricing-card">
+            <!-- <div class="pricing-card">
                 <h2>Early Bird</h2>
-                <p class="price">$180<span><!--/monts--></span></p>
+                <p class="price">$180<span>/monts</span></p>
                 <ul class="features">
                     <li>✅ Participation Certificate</li>
                     <li>✅ Conference Materials</li>
                     <li>✅ Translation & Facilitation Support</li>
                 </ul>
-                <!-- <a href="#" class="button">Get Started</a> -->
-            </div>
+                 <a href="#" class="button">Get Started</a> 
+            </div> -->
 
             <div class="pricing-card premium">
                 <h2>Regular Price</h2>
@@ -546,7 +567,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#program">Program</a></li>
                     <li><a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfYpL5S0vJoIqX_tWnOYc508hjBBmWz-oiXWJkSVUPhe_M5Mg/viewform">Register</a>
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform">Register</a>
                     </li>
                     <li><a href="#faqs">FAQs</a></li>
                 </ul>
@@ -620,6 +641,21 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
+
+        // Pagination dots functionality
+        const dots = document.querySelectorAll('.dot');
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function () {
+                // Remove active class from all dots
+                dots.forEach(d => d.classList.remove('active'));
+                // Add active class to clicked dot
+                this.classList.add('active');
+
+                // Here you could implement slide functionality if you had multiple slides
+                console.log(`Slide ${index + 1} selected`);
+            });
+        });
     </script>
 </body>
 
