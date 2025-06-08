@@ -108,6 +108,7 @@ nav.scrolled {
 
 /* Hero Section */
 .hero {
+    background-image: url(background.jpg);
     height: 85vh;
     display: flex;
     flex-direction: column;
@@ -164,6 +165,7 @@ nav.scrolled {
 }
 
 .hero-content p {
+    color: #000;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
