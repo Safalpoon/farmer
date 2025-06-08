@@ -235,6 +235,13 @@ nav.scrolled {
     justify-content: space-around;
 }
 
+
+.partner img{
+    width: 250px;
+    height: 100px;
+}
+
+
 /* Event Section */
 .event-section {
     padding: 60px 20px;
