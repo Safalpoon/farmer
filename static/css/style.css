@@ -49,9 +49,10 @@ nav .logo {
     transform: scale(1.05);
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -491,6 +492,7 @@ html {
 }
 
 .pricing-card {
+    min-height: 300px;
     background: #fff;
     border: 2px solid #037a5a;
     border-radius: 20px;
@@ -499,6 +501,12 @@ html {
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .pricing-card:hover {
@@ -1249,7 +1257,7 @@ select {
     max-width: 350px;
 }
 
-.logo h2{
+.logo h2 {
     color: #fff;
 }
 
